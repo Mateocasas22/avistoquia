@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0"
+            prefWidth="800.0" styleClass="parent" stylesheets="@../css/stylesheet.css"
+            xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.ppiproject.LoginController">
+    <children>
+        <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+              prefHeight="600.0" prefWidth="400.0" styleClass="sidebar">
+            <children>
+                <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" smooth="false">
+                    <image>
+                        <Image url="@../image/IconAvistoquia.jpg"/>
+                    </image>
+                    <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+                    </VBox.margin>
+                </ImageView>
+                <Label layoutX="168.0" layoutY="361.0" prefHeight="39.0" prefWidth="114.0" text="AVISTOQUIA"
+                       textFill="WHITE">
+                    <font>
+                        <Font name="Impact" size="24.0"/>
+                    </font>
+                    <effect>
+                        <DropShadow/>
+                    </effect>
+                </Label>
+            </children>
+        </VBox>
+        <Pane fx:id="ContenidoArea" layoutX="400.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+              minWidth="-Infinity" prefHeight="600.0" prefWidth="400.0" style="-fx-background-color: #FFF;">
+            <children>
+                <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="39.0" layoutY="63.0" pickOnBounds="true"
+                           preserveRatio="true">
+                    <image>
+                        <Image url="@"/>
+                    </image>
+                </ImageView>
+                <Label layoutX="39.0" layoutY="163.0" text="Bienvenido de vuelta,">
+                    <font>
+                        <Font name="Impact" size="24.0"/>
+                    </font>
+                </Label>
+                <Label layoutX="39.0" layoutY="192.0" text="Inicie sesión para continuar" textFill="#818181">
+                    <font>
+                        <Font name="Ebrima Bold" size="14.0"/>
+                    </font>
+                </Label>
+                <TextField fx:id="usuarioTextField" layoutX="56.0" layoutY="298.0" maxHeight="-Infinity"
+                           maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0"
+                           prefWidth="300.0" promptText="E-Mail">
+                    <font>
+                        <Font name="System Bold" size="14.0"/>
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="TEXT"/>
+                    </cursor>
+                </TextField>
+                <PasswordField fx:id="contraseñaPasswordField" layoutX="56.0" layoutY="352.0" maxHeight="-Infinity"
+                               maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0"
+                               prefWidth="300.0" promptText="Contraseña">
+                    <font>
+                        <Font name="System Bold" size="14.0"/>
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="TEXT"/>
+                    </cursor>
+                </PasswordField>
+                <Label layoutX="128.0" layoutY="397.0" styleClass="forgetBtn" stylesheets="@../css/stylesheet.css"
+                       text="¿Olvidaste la contraseña?" textFill="#a3a3a3">
+                    <font>
+                        <Font name="Ebrima" size="14.0"/>
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND"/>
+                    </cursor>
+                </Label>
+                <JFXButton buttonType="RAISED" layoutX="51.0" layoutY="442.0" maxHeight="-Infinity" maxWidth="-Infinity"
+                           minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="310.0"
+                           ripplerFill="#0777ff" styleClass="loginBtn" stylesheets="@../css/stylesheet.css"
+                           text="Iniciar Sesión">
+                    <font>
+                        <Font name="System Bold" size="14.0"/>
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND"/>
+                    </cursor>
+                </JFXButton>
+                <Label layoutX="121.0" layoutY="518.0" text="¿Usuario nuevo?" textFill="#a3a3a3">
+                    <font>
+                        <Font name="Ebrima" size="14.0"/>
+                    </font>
+                </Label>
+                <Label layoutX="230.0" layoutY="518.0" onMouseClicked="#abrirRegistro" text="Registrate"
+                       textFill="BLUEVIOLET">
+                    <font>
+                        <Font name="Ebrima" size="14.0"/>
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND"/>
+                    </cursor>
+                </Label>
+                <FontAwesomeIconView glyphName="CLOSE" layoutX="379.0" layoutY="20.0" onMouseClicked="#cerrarAplicacion"
+                                     size="1.5em" stroke="WHITE" styleClass="closeBtn"/>
+            </children>
+        </Pane>
+    </children>
+</AnchorPane>
